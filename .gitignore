@@ -1,0 +1,5 @@
+.well-known/
+.vscode/
+.htaccess
+config.php
+index2.html
