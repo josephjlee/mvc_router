@@ -1,5 +1,6 @@
 <?php
 
-echo 'hello, this is a test file';
+//echo 'hello, this is a test file';
+phpinfo();
 
 ?>
