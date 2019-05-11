@@ -1,5 +1,8 @@
 <?php
 
+$title = 'dblab - onizu.rf.gd';
+$intro = 'hello!';
+
 require 'functions.php';
 
 $query = require 'core/bootstrap.php';
@@ -7,15 +10,13 @@ $query = require 'core/bootstrap.php';
 $router = new Router;
 require 'routes.php';
 
-$uri = trim($_SERVER['REQUEST_URI'], '/');
+//$uri = trim($_SERVER['REQUEST_URI'], '/');
+$uri = '';
 
 require $router->direct($uri);
 
 
 
-
-$title = 'dblab - onizu.rf.gd';
-$intro = 'hello!';
 
 //$tasks = $query->selectAll('tasks');
 
