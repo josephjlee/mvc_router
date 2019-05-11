@@ -12,6 +12,7 @@
 
   <nav>
     <ul>
+      <li><a href="controllers/index.php">Home</a></li>
       <li><a href="controllers/about.php">About Us</a></li>
       <li><a href="controllers/about-culture.php">Our Culture</a></li>
       <li><a href="controllers/contact.php">Contact Us</a></li>
