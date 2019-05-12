@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title><?= $title; ?></title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="<?= $cssFile; ?>">
-</head>
-
-<body>
-  <?= $intro; ?>
-
-  <nav>
-    <ul>
-      <li><a href="controllers/index.php">Home</a></li>
-      <li><a href="controllers/about.php">About Us</a></li>
-      <li><a href="controllers/about-culture.php">Our Culture</a></li>
-      <li><a href="controllers/contact.php">Contact Us</a></li>
-    </ul>
-  </nav>
+<?php require __DIR__.('/partials/head.php'); ?>
 
   <ul>
     <?php foreach ($tasks as $task): ?>
@@ -31,6 +12,4 @@
     <?php endforeach; ?>
   </ul>
 
-</body>
-
-</html>
+<?php require __DIR__.('/partials/footer.php'); ?>
