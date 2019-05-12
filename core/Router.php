@@ -24,7 +24,7 @@ class Router {
       var_dump($directURI);
       return $this->routes[$uri];
     }
-    throw new Exception('No route defined for this URI.');
+    throw new Exception("No route defined for this URI: $uri");
 
   }
 

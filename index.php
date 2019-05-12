@@ -2,15 +2,10 @@
 
 require 'core/bootstrap.php';
 
-//$router = new Router;
-//require 'routes.php';
+echo 'from index.php - $uri captured in bootstrap: '.$uri.'<br>';
 
-$uri = Request::uri();
-echo 'from index.php - $uri captured: '.$uri.'<br>';
-$uri = 'about'; // Resetting $uri
+$uriNav = $_GET['uri'] ?? 'home'; // if 'uri' not received, set $uriNav to 'home'
 
-//require $router->direct($uri);
-
-require Router::load('routes.php')->direct($uri); //chaining methods
+require Router::load('routes.php')->direct($uriNav); //chaining methods
 
 ?>

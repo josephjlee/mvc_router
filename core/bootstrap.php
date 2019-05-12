@@ -4,7 +4,7 @@ $app = [];
 
 $title = 'dblab - onizu.rf.gd';
 $intro = 'hello!';
-$cssFile = '..\styles.css';
+$cssFile = 'styles2.css';
 
 $app['config'] = require __DIR__.'/../config.php';
 require __DIR__.'/Router.php';
@@ -15,5 +15,7 @@ require __DIR__.'/database/QueryBuilder.php';
 // $pdo = Connection::make();
 
 $app['database'] = new QueryBuilder(Connection::make($app['config']['database']));
+
+$uri = Request::uri();
 
 ?>
