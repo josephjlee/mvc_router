@@ -1,21 +1,16 @@
 <?php
 
-$title = 'dblab - onizu.rf.gd';
-$intro = 'hello!';
+require 'core/bootstrap.php';
 
-require 'functions.php';
+//$router = new Router;
+//require 'routes.php';
 
-$query = require 'core/bootstrap.php';
+$uri = Request::uri();
+$uri = ''; // Resetting $uri so it directs to index, as the 'Request URI' works only when the site is at document root level.
 
-$router = new Router;
-require 'routes.php';
+//require $router->direct($uri);
 
-//$uri = trim($_SERVER['REQUEST_URI'], '/');
-$uri = '';
-
-require $router->direct($uri);
-
-
+require Router::load('routes.php')->direct($uri); //chaining methods
 
 
 //$tasks = $query->selectAll('tasks');

@@ -18,6 +18,6 @@ function scriptLocation($path) {
   echo '<b>'.$path.'</b>';
   echo '<br>__DIR__: '.$magicConstDir;
   echo '<br>__FILE__: '.$magicConstFile;
-  echo '<br>scriptName: '.$scriptName;
+  echo '<br>SCRIPT_NAME: '.$scriptName;
   echo '<br><br>';
 }

@@ -1,8 +1,11 @@
 <?php
-scriptLocation('controllers/index.php');
-$tasks = $query->selectAll('tasks');
 
-require 'views/index.view.php';
+require_once __DIR__.'/../functions.php';
+// scriptLocation('controllers/index.php');
+
+$tasks = $app['database']->selectAll('tasks');
+
+require __DIR__.'/../views/index.view.php';
 
 
 
