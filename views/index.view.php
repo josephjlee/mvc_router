@@ -1,4 +1,5 @@
 <?php require __DIR__.('/partials/head.php'); ?>
+
 <div class="box1 boxRounded">
   <ul>
     <?php foreach ($tasks as $task): ?>
@@ -10,6 +11,14 @@
         <?php endif; ?>
       </li>
     <?php endforeach; ?>
+  </ul>
+</div>
+
+<div class="box1 boxRounded">
+  <ul>
+  <?php foreach ($users as $user): ?>
+    <li><?= $user->name; ?></li>
+  <?php endforeach; ?>
   </ul>
 </div>
 

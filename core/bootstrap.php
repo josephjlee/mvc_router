@@ -17,5 +17,6 @@ require __DIR__.'/database/QueryBuilder.php';
 $app['database'] = new QueryBuilder(Connection::make($app['config']['database']));
 
 $uri = Request::uri();
+$requestType = Request::method();
 
 ?>

@@ -8,4 +8,7 @@ class Request {
         return $uri;
     }
 
+    public static function method() {
+        return $_SERVER['REQUEST_METHOD'];
+    }
 }
