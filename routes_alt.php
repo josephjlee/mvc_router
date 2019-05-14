@@ -1,12 +1,11 @@
 <?php
 
-$path = 'dproj/onizu.rf.gd/mvc_router';
-
 $router->define ([
-  $path => 'controllers/index.php',
-  $path.'about' => 'controllers/about.php',
-  $path.'about/culture' => 'controllers/about-culture.php',
-  $path.'contact' => 'controllers/contact.php'
+  'home' => 'controllers/home.php',
+  'about' => 'controllers/about.php',
+  'about-culture' => 'controllers/about-culture.php',
+  'contact' => 'controllers/contact.php',
+  'add-name' => 'controllers/add-name.php'
 ]);
 
 ?>

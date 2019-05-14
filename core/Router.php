@@ -20,12 +20,23 @@ class Router {
   public function direct($uri) {
     if (array_key_exists($uri, $this->routes)) {
       echo 'from Router class - direct() method called, $uri matched in routes.php <br>';
-      $directURI = $this->routes[$uri];
-      var_dump($directURI);
-      return $this->routes[$uri];
+      //$directURI = $this->routes[$uri];
+      //var_dump($directURI);
+      //return $this->routes[$uri];
+      return $this->callAction(
+        ...explode('@', $this->routes[$uri]) // '...' (splat operator) converts array items into function arguments
+      );  
     }
     throw new Exception("No route defined for this URI: $uri");
 
+  }
+
+  protected function callAction($controller, $action) {
+    $controller = new $controller;
+    if (!method_exists($controller, $action)) {
+      throw new Exception("controller does not respond to the {$action} action.");
+    }
+    return $controller->$action();
   }
 
 }

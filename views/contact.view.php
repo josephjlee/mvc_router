@@ -1,7 +1,5 @@
 <?php require __DIR__.('/partials/head.php'); ?>
 
-  <h1>Contact Us</h1>
-
   <form method="POST" action="index.php">
     <input type="hidden" name="uri" value="<?= $formURI ?>">
     <label for="name">Enter your name</label>
