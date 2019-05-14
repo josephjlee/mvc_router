@@ -1,5 +1,6 @@
 <?php
 
+
 require __DIR__.'/Router.php';
 require __DIR__.'/Request.php';
 require __DIR__.'/database/Connection.php';
@@ -7,6 +8,8 @@ require __DIR__.'/database/QueryBuilder.php';
 require __DIR__.'/App.php';
 require __DIR__.'/../controllers/PagesController.php';
 require __DIR__.'/../controllers/UsersController.php';
+
+use App\Core\{App, Request};
 
 //$app = [];
 //$app['config'] = require __DIR__.'/../config.php';

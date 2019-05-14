@@ -2,6 +2,8 @@
 
 require 'core/bootstrap.php';
 
+use App\Core\Router;
+
 echo 'from index.php - $uri captured in bootstrap: '.$uri.'<br>';
 
 if($requestType == 'POST') {
